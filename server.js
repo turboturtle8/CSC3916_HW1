@@ -7,8 +7,8 @@ server.on("request", (request, response) => {
         body.push(chunk);
     });
     request
-        .on("end", () => {
-            body = body.concat.toString();  //end request is one per request
+        .on("end", () => {                          //end request is one per request
+            body = body.concat.toString();  
             response.end(body);
         })
         .on("error", () => {
@@ -18,8 +18,8 @@ server.on("request", (request, response) => {
     response.on("error", err => {
         console.err(err);
     });
-    //response.write("Hello 2021 World!");
-    //response.end();
+    response.write("Hello 2021 World!");
+    response.end();
     console.log(sever.address());
 });
 
