@@ -18,8 +18,8 @@ server.on("request", (request, response) => {
     response.on("error", err => {
         console.err(err);
     });
-    response.write("Hello 2021 World!");
-    response.end();
+   // response.write("Hello 2021 World!");
+    //response.end();
     console.log(sever.address());
 });
 
